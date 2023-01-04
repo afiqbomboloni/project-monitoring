@@ -39,10 +39,9 @@
                                 <img src="{{ asset('images/'.$leader->image) }}" style="width: 100px"></td>
                                 
                             <td>
-                                <form action="{{ route('project-leader.destroy', $leader->id) }}" method="POST">@csrf
+
                                 <a href="{{ route('project-leader.edit', $leader->id) }}" class="btn btn-success"><i class="bi bi-pen"></i>Edit</a>
-                                <button onclick="return confirm('Mau dihapus?')" class="btn btn-danger"><i class="bi bi-trash"></i>Hapus</button>
-                                </form>
+
                             </td>
                         </tr>
                     @endforeach

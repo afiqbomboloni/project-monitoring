@@ -72,10 +72,7 @@ class ProjectController extends Controller
     public function destroy($id)
     {
         $project = ProjectMonitoring::find($id);
-        $project_delete = new ProjectMonitoring;
-        if($project_delete->leader()->count()) {
-            return back()->withErrors(['error' => 'Tidak dapat menghapus karena']);
-        }
+        
         $project->delete();
         return redirect('/project-monitor');
     }
