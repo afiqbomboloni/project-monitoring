@@ -79,6 +79,10 @@ class ProjectLeaderController extends Controller
         $leader = ProjectLeader::find($id);
         $fileName = $leader->image;
         File::delete('images/'.$fileName);
+        $project_delete = new ProjectLeader;
+        if($project_delete->projects()->count()) {
+            return back()->withErrors(['error' => 'Tidak dapat menghapus karena']);
+        }
         $leader->delete();
         return redirect('/project-leader')->with('pesan', 'Data Berhasil dihapus');
     }
