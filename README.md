@@ -7,7 +7,24 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Cara Pengoperasian:
+Git Clone
+Composer install
+Npm install (jika error jalankan npm install –force)
+Npm run dev
+Buat database di phpMyAdmin
+Copy paste file .env.example dan ganti jadi .env
+Isi nama database sesuai yang dibuat
+Php artisan migrate –seed
+Php artisan key:generate
+Php artisan serve
+Isi project Leader terlebih dahulu
+Lalu isi project monitoring
+Anda bisa lakukan search
+Progress bar dinamis
+Menerapkan eloquent one to many
+Terdapat juga pagination
+Cara Login
+Email: john@gmail.com
+Password: john@123
 
