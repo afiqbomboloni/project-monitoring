@@ -39,8 +39,11 @@
                                 <img src="{{ asset('images/'.$leader->image) }}" style="width: 100px"></td>
                                 
                             <td>
-
-                                <a href="{{ route('project-leader.edit', $leader->id) }}" class="btn btn-success"><i class="bi bi-pen"></i>Edit</a>
+                                <form action="{{ route('project-leader.destroy', $leader->id) }}" method="POST">@csrf
+                                    <a href="{{ route('project-leader.edit', $leader->id) }}" class="btn btn-success"><i class="bi bi-pen"></i>Edit</a>
+                                    <button class="btn btn-danger" onclick="return confirm('Yakin?')">Hapus</button>
+                                </form>
+                                
 
                             </td>
                         </tr>
