@@ -31,7 +31,7 @@
                         <select name="leader_id" class="form-control @error('leader_id') is-invalid @enderror">
                             <option value="">Pilih Project Leader</option>
                             @foreach ($leader as $data)
-                                <option value="{{ $data->id }}">{{ $data->name }}</option>
+                                <option value="{{ $data->id }}" {{ $data->id == $project->leader_id ? 'selected' : '' }}>{{ $data->name }}</option>
                             @endforeach
                         </select>
                         @error('leader_id')
